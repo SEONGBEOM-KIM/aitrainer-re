@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+{% load static %}
+{% block page_name %}Home{% endblock page_name %}
+
+{% block content %}
+<script>
+  var index = 0;
+  window.onload = function () {
+    slideShow();
+  }
+
+  function slideShow() {
+    var i;
+    var x = document.getElementsByClassName("slide1");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none"
+    }
+    index++;
+    if (index > x.length) {
+      index = 1;
+    }
+    x[index - 1].style.display = "block";
+    setTimeout(slideShow, 4000)
+  }
+</script>
+
+<div class="bg-img container rounded-xl mx-auto bg-gray-800 mb-10 mt-24">
+  <img src="https://user-images.githubusercontent.com/59245627/91654346-d4af7b00-eae2-11ea-8925-d15c4b342479.jpg"
+    class="slide1 w-full bg-cover overflow-hidden rounded-xl h-50vh" id="mainImage" alt="noImage">
+  <img src="https://user-images.githubusercontent.com/59245627/91654364-0d4f5480-eae3-11ea-877a-7545d8ea47c0.jpg"
+    class="slide1 w-full bg-cover overflow-hidden rounded-xl h-50vh" id="mainImage" alt="noImage">
+  <img src="https://user-images.githubusercontent.com/59245627/91653924-b431f180-eadf-11ea-9ae2-dd8b3723694f.jpg"
+    class="slide1 w-full bg-cover overflow-hidden rounded-xl h-50vh" id="mainImage" alt="noImage">
+  <img src="https://user-images.githubusercontent.com/59245627/91654621-50122c00-eae5-11ea-9c8f-19f5c607afe8.jpg"
+    class="slide1 w-full bg-cover overflow-hidden rounded-xl h-50vh" id="mainImage" alt="noImage">
+  <img src="https://user-images.githubusercontent.com/59245627/91654632-615b3880-eae5-11ea-928d-e541c95a76f1.jpg"
+    class="slide1 w-full bg-cover overflow-hidden rounded-xl h-50vh" id="mainImage" alt="noImage">
+  <img src="https://user-images.githubusercontent.com/59245627/91654638-759f3580-eae5-11ea-8166-7bdc6456cff1.jpg"
+    class="slide1 w-full bg-cover overflow-hidden rounded-xl h-50vh" id="mainImage" alt="noImage">
+</div>
+
+
+<div class="container mx-auto h-25vh w-full">
+  <ul class="flex items-center h-full w-full justify-between">
+
+    <li
+      class="bg-gray-100 w-2/6 h-25vh mx-2 ml-0 flex items-center justify-center rounded-xl bg-cover bg-center shadow-md hover:shadow-lg">
+      {% if user.is_authenticated %}
+      <a class="h-full w-full flex flex-col items-center justify-center" href="{{user.get_absolute_url}}">
+        <i class="far fa-address-card fa-5x mb-5"></i>
+        <span class="mb-3 text-teal-500 text-xl font-semibold">PAPS 기록 입력하기</span>
+        <span class="mb-3 text-gray-700 text-md font-light">나의 건강 체력 수준을 확인해보세요</span>
+      </a>
+      {% else %}
+      <a class="h-full w-full flex flex-col items-center justify-center" href="{% url "users:login" %}">
+        <i class="far fa-address-card fa-5x mb-5"></i>
+        <span class="mb-3 text-teal-500 text-xl font-semibold">PAPS 기록 입력하기</span>
+        <span class="mb-3 text-gray-700 text-md font-light">나의 건강 체력 수준을 확인해보세요</span>
+      </a>
+      {% endif %}
+    </li>
+    <li
+      class="bg-gray-100 w-2/6 h-25vh mx-2 flex items-center justify-center rounded-xl bg-cover bg-center shadow-md hover:shadow-lg">
+      <a class="h-full w-full flex flex-col items-center justify-center" href="{% url "todo:list" %}">
+        <i class="fas fa-list-ol fa-5x mb-5"></i>
+        <span class="mb-3 text-teal-500 text-xl font-semibold">계획 세우기</span>
+        <span class="mb-3 text-gray-700 text-md font-light">나에게 맞는 운동 목표를 세워보세요</span>
+      </a>
+    </li>
+    <li
+      class="bg-gray-100 w-2/6 h-25vh mx-2 mr-0 flex items-center justify-center rounded-xl bg-cover bg-center shadow-md hover:shadow-lg">
+      <a class="h-full w-full flex flex-col items-center justify-center" href="{% url "exercise:main" %}">
+        <i class="fas fa-running fa-5x mb-5"></i>
+        <span class="mb-3 text-teal-500 text-xl font-semibold">운동하기</span>
+        <span class="mb-3 text-gray-700 text-md font-light">건강 체력을 기르기 위해 운동을 시작하세요</span>
+      </a>
+    </li>
+  </ul>
+</div>
+
+{% endblock content %}

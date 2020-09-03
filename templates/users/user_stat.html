@@ -1,0 +1,180 @@
+<div class="w-full flex items-start">
+    <ul class="stat text-center rounded-sm font-light text-lg w-1/6">
+        <li class="w-full text-center rounded-xl font-light text-md py-2 mb-3 border border-gray-400">왕복오래달리기
+            
+            {% if user.pacer %}
+                <i class="fas fa-check-circle text-teal-400 ml-1"></i>
+            {% endif %}
+                
+        </li>
+        <li class="w-full text-center rounded-xl font-light text-md py-2 mb-3 border border-gray-400">오래달리기걷기
+            {% if user.longTimeRun %}
+                <i class="fas fa-check-circle text-teal-400 ml-1"></i>
+            {% endif %}
+        </li>
+        <li class="w-full text-center rounded-xl font-light text-md py-2 mb-3 border border-gray-400">스텝검사
+            {% if user.stepTest %}
+                <i class="fas fa-check-circle text-teal-400 ml-1"></i>
+            {% endif %}
+        </li>
+    </ul>
+    <ul class="stat text-center rounded-sm font-light text-lg w-1/12 mr-10">
+        <li class="w-full text-center rounded-xl font-light text-lg py-2 mb-3 border border-gray-400">
+            {% if user.pacer == None %}
+                -
+            {% else %}
+                {{user.pacer}}
+            {% endif %}       
+        </li>
+        <li class="w-full text-center rounded-xl font-light text-lg py-2 mb-3 border border-gray-400">
+            {% if user.longTimeRun == None %}
+                -
+            {% else %}
+                {{user.longTimeRun}}
+            {% endif %}
+        </li>
+        <li class="w-full text-center rounded-xl font-light text-lg py-2 mb-3 border border-gray-400">
+            {% if user.stepTest == None %}
+                -
+            {% else %}
+                {{user.stepTest}}
+            {% endif %}
+        </li>
+    </ul>
+    <ul class="stat text-center rounded-sm font-light text-lg w-1/6">
+        <li class="w-full text-center rounded-xl font-light text-sm py-3 mb-3 border border-gray-400">앉아윗몸앞으로굽히기
+            {% if user.bendFoward %}
+                <i class="fas fa-check-circle text-teal-400 ml-1"></i>
+            {% endif %}
+        </li>
+        <li class="w-full text-center rounded-xl font-light text-md py-2 mb-3 border border-gray-400">종합유연성
+            {% if user.totalFlexibility %}
+                <i class="fas fa-check-circle text-teal-400 ml-1"></i>
+            {% endif %}
+        </li>
+    </ul>
+    <ul class="stat text-center rounded-sm font-light text-lg w-1/12 mr-10">
+        <li class="text-center rounded-xl font-light text-lg py-2 mb-3 border border-gray-400">
+            {% if user.bendFoward == None %}
+                -
+            {% else %}
+                {{user.bendFoward}}
+            {% endif %}
+        </li>
+        <li  class="text-center rounded-xl font-light text-lg py-2 mb-3 border border-gray-400">
+            {% if user.totalFlexibility == None %}
+                -
+            {% else %}
+                {{user.totalFlexibility}}
+            {% endif %}
+        </li>
+    </ul>
+    <ul class="stat text-center rounded-sm font-light text-lg w-1/6">
+        {% comment %} <li>pushUp
+            {% if user.pushUp %}
+                <i class="fas fa-check-circle text-teal-400 ml-1"></i>
+            {% endif %}
+        </li> {% endcomment %}
+        <li class="text-center rounded-xl font-light text-lg py-2 mb-3 border border-gray-400">윗몸말아올리기
+            {% if user.sitUp %}
+                <i class="fas fa-check-circle text-teal-400 ml-1"></i>
+            {% endif %}
+        </li>
+        <li class="text-center rounded-xl font-light text-lg py-2 mb-3 border border-gray-400">악력
+            {% if user.grip %}
+                <i class="fas fa-check-circle text-teal-400 ml-1"></i>
+            {% endif %}
+        </li>
+    </ul>
+    <ul class="stat text-center rounded-sm font-light text-lg w-1/12 mr-10">
+        {% comment %} <li>
+            {% if user.pushUp == None %}
+                -
+            {% else %}
+                {{user.pushUp}}
+            {% endif %}
+        </li> {% endcomment %}
+        <li class="text-center rounded-xl font-light text-lg py-2 mb-3 border border-gray-400">
+            {% if user.sitUp == None %}
+                -
+            {% else %}
+                {{user.sitUp}}
+            {% endif %}
+        </li>
+        <li class="text-center rounded-xl font-light text-lg py-2 mb-3 border border-gray-400">
+            {% if user.grip == None %}
+                -
+            {% else %}
+                {{user.grip}}
+            {% endif %}
+        </li>
+    </ul>
+    <ul class="stat text-center rounded-sm font-light text-lg w-1/6">
+        <li class="text-center rounded-xl font-light text-lg py-2 mb-3 border border-gray-400">50m달리기
+            {% if user.sprint %}
+                <i class="fas fa-check-circle text-teal-400 ml-1"></i>
+            {% endif %}
+        </li>
+        <li class="text-center rounded-xl font-light text-lg py-2 mb-3 border border-gray-400">제자리멀리뛰기
+            {% if user.longJump %}
+                <i class="fas fa-check-circle text-teal-400 ml-1"></i>
+            {% endif %}
+        </li>
+    </ul>
+    <ul class="stat text-center rounded-sm font-light text-lg w-1/12 mr-10">
+        <li class="text-center rounded-xl font-light text-lg py-2 mb-3 border border-gray-400">
+            {% if user.sprint == None %}
+                -
+            {% else %}
+                {{user.sprint}}
+            {% endif %}
+        </li>
+        <li class="text-center rounded-xl font-light text-lg py-2 mb-3 border border-gray-400">
+            {% if user.longJump == None %}
+                -
+            {% else %}
+                {{user.longJump}}
+            {% endif %}
+        </li>
+    </ul>
+    <ul class="stat text-center rounded-sm font-light text-lg w-1/6">
+        <li class="text-center rounded-xl font-light text-lg py-2 mb-3 border border-gray-400">키
+            {% if user.height %}
+                <i class="fas fa-check-circle text-teal-400 ml-1"></i>
+            {% endif %}
+        </li>
+        <li class="text-center rounded-xl font-light text-lg py-2 mb-3 border border-gray-400">몸무게
+            {% if user.weight %}
+                <i class="fas fa-check-circle text-teal-400 ml-1"></i>
+            {% endif %}
+        </li>
+        {% comment %} <li>fat
+            {% if user.fat %}
+                <i class="fas fa-check-circle text-teal-400 ml-1"></i>
+            {% endif %} {% endcomment %}
+        </li>
+    </ul>
+    <ul class="stat text-center rounded-sm font-light text-lg w-1/12">
+        <li class="text-center rounded-xl font-light text-lg py-2 mb-3 border border-gray-400">
+            {% if user.height == None %}
+                -
+            {% else %}
+                {{user.height}}
+            {% endif %}
+        </li>
+        <li class="text-center rounded-xl font-light text-lg py-2 mb-3 border border-gray-400">
+            {% if user.weight == None %}
+                -
+            {% else %}
+                {{user.weight}}
+            {% endif %}
+        </li>
+        {% comment %} <li>
+            {% if user.fat == None %}
+                -
+            {% else %}
+                {{user.fat}}
+            {% endif %}
+        </li> {% endcomment %}
+    </ul>
+</div>
