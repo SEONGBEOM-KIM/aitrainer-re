@@ -11,6 +11,9 @@ django = "==2.2.5"
 pillow = "*"
 requests = "*"
 django-dotenv = "*"
+gunicorn = "*"
+whitenoise = "*"
+django-heroku = "*"
 
 [requires]
 python_version = "3.8"
