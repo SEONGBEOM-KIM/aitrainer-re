@@ -13,7 +13,7 @@ requests = "*"
 django-dotenv = "*"
 gunicorn = "*"
 whitenoise = "*"
-django-heroku = "*"
+django_heroku = "*"
 
 [requires]
 python_version = "3.8"
