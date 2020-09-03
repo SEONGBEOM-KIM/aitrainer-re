@@ -46,21 +46,21 @@ class User(AbstractUser):
         (LOGIN_KAKAO, "Kakao"),
     )
 
-    name = models.CharField(max_length=20, blank=True, verbose_name="이름")
-    school = models.CharField(max_length=10, blank=True, verbose_name="학교")
-    grade = models.IntegerField(choices=NUMBER_CHOICES, blank=True, null=True, verbose_name="학년")
-    group = models.IntegerField(blank=True, null=True, verbose_name="반")
-    number = models.IntegerField(blank=True, null=True, verbose_name="번호")
-    age = models.IntegerField(blank=True, null=True, verbose_name="나이")
+    name = models.CharField(max_length=20, blank=True)
+    school = models.CharField(max_length=10, blank=True)
+    grade = models.IntegerField(choices=NUMBER_CHOICES, blank=True, null=True)
+    group = models.IntegerField(blank=True, null=True)
+    number = models.IntegerField(blank=True, null=True)
+    age = models.IntegerField(blank=True, null=True)
     gender = models.CharField(
-        choices=GENDER_CHOICES, max_length=10, blank=True, null=True, verbose_name="성별"
+        choices=GENDER_CHOICES, max_length=10, blank=True, null=True
     )
-    teacher = models.BooleanField(default=False, verbose_name="교사 여부")
-    bio = models.TextField(blank=True, null=True, verbose_name="자기소개")
-    email_verified = models.BooleanField(default=False, verbose_name="Email 확인")
-    email_secret = models.CharField(max_length=20, default="", blank=True, verbose_name="Email Secret")
+    teacher = models.BooleanField(default=False)
+    bio = models.TextField(blank=True, null=True)
+    email_verified = models.BooleanField(default=False)
+    email_secret = models.CharField(max_length=20, default="", blank=True)
     login_method = models.CharField(
-        max_length=50, choices=LOGIN_CHOICES, default=LOGIN_EMAIL, verbose_name="로그인 방법"
+        max_length=50, choices=LOGIN_CHOICES, default=LOGIN_EMAIL
     )
 
     # PAPS Events

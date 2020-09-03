@@ -1,21 +1,21 @@
 <div class="w-full flex items-start">
     <ul class="stat text-center rounded-sm font-light text-lg w-1/6">
-        <li class="w-full text-center rounded-xl font-light text-md py-2 mb-3 border border-gray-400">왕복오래달리기
+        <li class="w-full text-center rounded-xl font-light text-sm py-2 mb-3 border border-gray-400">왕복오래달리기
             
-            {% if user.pacer %}
+            {% comment %} {% if user.pacer %}
                 <i class="fas fa-check-circle text-teal-400 ml-1"></i>
-            {% endif %}
+            {% endif %} {% endcomment %}
                 
         </li>
-        <li class="w-full text-center rounded-xl font-light text-md py-2 mb-3 border border-gray-400">오래달리기걷기
-            {% if user.longTimeRun %}
+        <li class="w-full text-center rounded-xl font-light text-sm py-2 mb-3 border border-gray-400">오래달리기걷기
+            {% comment %} {% if user.longTimeRun %}
                 <i class="fas fa-check-circle text-teal-400 ml-1"></i>
-            {% endif %}
+            {% endif %} {% endcomment %}
         </li>
-        <li class="w-full text-center rounded-xl font-light text-md py-2 mb-3 border border-gray-400">스텝검사
-            {% if user.stepTest %}
+        <li class="w-full text-center rounded-xl font-light text-sm py-2 mb-3 border border-gray-400">스텝검사
+            {% comment %} {% if user.stepTest %}
                 <i class="fas fa-check-circle text-teal-400 ml-1"></i>
-            {% endif %}
+            {% endif %} {% endcomment %}
         </li>
     </ul>
     <ul class="stat text-center rounded-sm font-light text-lg w-1/12 mr-10">
@@ -24,6 +24,7 @@
                 -
             {% else %}
                 {{user.pacer}}
+                <i class="fas fa-check-circle text-teal-400 ml-1"></i>
             {% endif %}       
         </li>
         <li class="w-full text-center rounded-xl font-light text-lg py-2 mb-3 border border-gray-400">
@@ -31,6 +32,7 @@
                 -
             {% else %}
                 {{user.longTimeRun}}
+                <i class="fas fa-check-circle text-teal-400 ml-1"></i>
             {% endif %}
         </li>
         <li class="w-full text-center rounded-xl font-light text-lg py-2 mb-3 border border-gray-400">
@@ -38,19 +40,20 @@
                 -
             {% else %}
                 {{user.stepTest}}
+                <i class="fas fa-check-circle text-teal-400 ml-1"></i>
             {% endif %}
         </li>
     </ul>
     <ul class="stat text-center rounded-sm font-light text-lg w-1/6">
         <li class="w-full text-center rounded-xl font-light text-sm py-3 mb-3 border border-gray-400">앉아윗몸앞으로굽히기
-            {% if user.bendFoward %}
+            {% comment %} {% if user.bendFoward %}
                 <i class="fas fa-check-circle text-teal-400 ml-1"></i>
-            {% endif %}
+            {% endif %} {% endcomment %}
         </li>
-        <li class="w-full text-center rounded-xl font-light text-md py-2 mb-3 border border-gray-400">종합유연성
-            {% if user.totalFlexibility %}
+        <li class="w-full text-center rounded-xl font-light text-sm py-2 mb-3 border border-gray-400">종합유연성
+            {% comment %} {% if user.totalFlexibility %}
                 <i class="fas fa-check-circle text-teal-400 ml-1"></i>
-            {% endif %}
+            {% endif %} {% endcomment %}
         </li>
     </ul>
     <ul class="stat text-center rounded-sm font-light text-lg w-1/12 mr-10">
@@ -59,6 +62,7 @@
                 -
             {% else %}
                 {{user.bendFoward}}
+                <i class="fas fa-check-circle text-teal-400 ml-1"></i>
             {% endif %}
         </li>
         <li  class="text-center rounded-xl font-light text-lg py-2 mb-3 border border-gray-400">
@@ -66,6 +70,7 @@
                 -
             {% else %}
                 {{user.totalFlexibility}}
+                <i class="fas fa-check-circle text-teal-400 ml-1"></i>
             {% endif %}
         </li>
     </ul>
@@ -75,15 +80,15 @@
                 <i class="fas fa-check-circle text-teal-400 ml-1"></i>
             {% endif %}
         </li> {% endcomment %}
-        <li class="text-center rounded-xl font-light text-lg py-2 mb-3 border border-gray-400">윗몸말아올리기
-            {% if user.sitUp %}
+        <li class="text-center rounded-xl font-light text-sm py-2 mb-3 border border-gray-400">윗몸말아올리기
+            {% comment %} {% if user.sitUp %}
                 <i class="fas fa-check-circle text-teal-400 ml-1"></i>
-            {% endif %}
+            {% endif %} {% endcomment %}
         </li>
-        <li class="text-center rounded-xl font-light text-lg py-2 mb-3 border border-gray-400">악력
-            {% if user.grip %}
+        <li class="text-center rounded-xl font-light text-sm py-2 mb-3 border border-gray-400">악력
+            {% comment %} {% if user.grip %}
                 <i class="fas fa-check-circle text-teal-400 ml-1"></i>
-            {% endif %}
+            {% endif %} {% endcomment %}
         </li>
     </ul>
     <ul class="stat text-center rounded-sm font-light text-lg w-1/12 mr-10">
@@ -99,6 +104,7 @@
                 -
             {% else %}
                 {{user.sitUp}}
+                <i class="fas fa-check-circle text-teal-400 ml-1"></i>
             {% endif %}
         </li>
         <li class="text-center rounded-xl font-light text-lg py-2 mb-3 border border-gray-400">
@@ -106,47 +112,50 @@
                 -
             {% else %}
                 {{user.grip}}
+                <i class="fas fa-check-circle text-teal-400 ml-1"></i>
             {% endif %}
         </li>
     </ul>
     <ul class="stat text-center rounded-sm font-light text-lg w-1/6">
-        <li class="text-center rounded-xl font-light text-lg py-2 mb-3 border border-gray-400">50m달리기
-            {% if user.sprint %}
+        <li class="text-center rounded-xl font-light text-sm py-2 mb-3 border border-gray-400">50m달리기
+            {% comment %} {% if user.sprint %}
                 <i class="fas fa-check-circle text-teal-400 ml-1"></i>
-            {% endif %}
+            {% endif %} {% endcomment %}
         </li>
-        <li class="text-center rounded-xl font-light text-lg py-2 mb-3 border border-gray-400">제자리멀리뛰기
-            {% if user.longJump %}
+        <li class="text-center rounded-xl font-light text-sm py-2 mb-3 border border-gray-400">제자리멀리뛰기
+            {% comment %} {% if user.longJump %}
                 <i class="fas fa-check-circle text-teal-400 ml-1"></i>
-            {% endif %}
+            {% endif %} {% endcomment %}
         </li>
     </ul>
     <ul class="stat text-center rounded-sm font-light text-lg w-1/12 mr-10">
-        <li class="text-center rounded-xl font-light text-lg py-2 mb-3 border border-gray-400">
+        <li class="text-center rounded-xl font-light text-sm py-2 mb-3 border border-gray-400">
             {% if user.sprint == None %}
                 -
             {% else %}
                 {{user.sprint}}
+                <i class="fas fa-check-circle text-teal-400 ml-1"></i>
             {% endif %}
         </li>
-        <li class="text-center rounded-xl font-light text-lg py-2 mb-3 border border-gray-400">
+        <li class="text-center rounded-xl font-light text-sm py-2 mb-3 border border-gray-400">
             {% if user.longJump == None %}
                 -
             {% else %}
                 {{user.longJump}}
+                <i class="fas fa-check-circle text-teal-400 ml-1"></i>
             {% endif %}
         </li>
     </ul>
     <ul class="stat text-center rounded-sm font-light text-lg w-1/6">
-        <li class="text-center rounded-xl font-light text-lg py-2 mb-3 border border-gray-400">키
-            {% if user.height %}
+        <li class="text-center rounded-xl font-light text-sm py-2 mb-3 border border-gray-400">키
+            {% comment %} {% if user.height %}
                 <i class="fas fa-check-circle text-teal-400 ml-1"></i>
-            {% endif %}
+            {% endif %} {% endcomment %}
         </li>
-        <li class="text-center rounded-xl font-light text-lg py-2 mb-3 border border-gray-400">몸무게
-            {% if user.weight %}
+        <li class="text-center rounded-xl font-light text-sm py-2 mb-3 border border-gray-400">몸무게
+            {% comment %} {% if user.weight %}
                 <i class="fas fa-check-circle text-teal-400 ml-1"></i>
-            {% endif %}
+            {% endif %} {% endcomment %}
         </li>
         {% comment %} <li>fat
             {% if user.fat %}
@@ -155,18 +164,20 @@
         </li>
     </ul>
     <ul class="stat text-center rounded-sm font-light text-lg w-1/12">
-        <li class="text-center rounded-xl font-light text-lg py-2 mb-3 border border-gray-400">
+        <li class="text-center rounded-xl font-light text-sm py-2 mb-3 border border-gray-400">
             {% if user.height == None %}
                 -
             {% else %}
                 {{user.height}}
+                <i class="fas fa-check-circle text-teal-400 ml-1"></i>
             {% endif %}
         </li>
-        <li class="text-center rounded-xl font-light text-lg py-2 mb-3 border border-gray-400">
+        <li class="text-center rounded-xl font-light text-sm py-2 mb-3 border border-gray-400">
             {% if user.weight == None %}
                 -
             {% else %}
                 {{user.weight}}
+                <i class="fas fa-check-circle text-teal-400 ml-1"></i>
             {% endif %}
         </li>
         {% comment %} <li>

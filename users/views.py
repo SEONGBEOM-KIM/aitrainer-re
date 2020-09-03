@@ -218,15 +218,15 @@ class UpdateProfileView(mixins.LoggedInOnlyView, SuccessMessageMixin, UpdateView
 
     def get_form(self, form_class=None):
         form = super().get_form(form_class=form_class)
-        form.fields["first_name"].widget.attrs = {"placeholder": "First name"}
-        form.fields["last_name"].widget.attrs = {"placeholder": "Last name"}
-        form.fields["school"].widget.attrs = {"placeholder": "School"}
-        form.fields["grade"].widget.attrs = {"placeholder": "Grade"}
-        form.fields["group"].widget.attrs = {"placeholder": "Group"}
-        form.fields["number"].widget.attrs = {"placeholder": "Number"}
-        form.fields["age"].widget.attrs = {"placeholder": "Age"}
-        form.fields["gender"].widget.attrs = {"placeholder": "Gender"}
-        form.fields["bio"].widget.attrs = {"placeholder": "Bio"}
+        form.fields["first_name"].widget.attrs = {"placeholder": "이름"}
+        form.fields["last_name"].widget.attrs = {"placeholder": "성"}
+        form.fields["school"].widget.attrs = {"placeholder": "학교"}
+        form.fields["grade"].widget.attrs = {"placeholder": "학년"}
+        form.fields["group"].widget.attrs = {"placeholder": "반"}
+        form.fields["number"].widget.attrs = {"placeholder": "번호"}
+        form.fields["age"].widget.attrs = {"placeholder": "나이"}
+        form.fields["gender"].widget.attrs = {"placeholder": "성별"}
+        form.fields["bio"].widget.attrs = {"placeholder": "자기소개"}
         return form
 
 class UpdatePasswordView(
