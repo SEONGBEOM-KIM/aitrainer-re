@@ -24,7 +24,9 @@
                 -
             {% else %}
                 {{user.pacer}}
-                <i class="fas fa-check-circle text-teal-400 ml-1"></i>
+                {% if user.pacer %}
+                    <i class="fas fa-check-circle text-teal-400 ml-1"></i>
+                {% endif %}
             {% endif %}       
         </li>
         <li class="w-full text-center rounded-xl font-light text-lg py-2 mb-3 border border-gray-400">
@@ -32,7 +34,9 @@
                 -
             {% else %}
                 {{user.longTimeRun}}
-                <i class="fas fa-check-circle text-teal-400 ml-1"></i>
+                {% if user.longTimeRun %}
+                    <i class="fas fa-check-circle text-teal-400 ml-1"></i>
+                {% endif %}
             {% endif %}
         </li>
         <li class="w-full text-center rounded-xl font-light text-lg py-2 mb-3 border border-gray-400">
@@ -40,7 +44,9 @@
                 -
             {% else %}
                 {{user.stepTest}}
-                <i class="fas fa-check-circle text-teal-400 ml-1"></i>
+                {% if user.stepTest %}
+                    <i class="fas fa-check-circle text-teal-400 ml-1"></i>
+                {% endif %}
             {% endif %}
         </li>
     </ul>
@@ -62,7 +68,9 @@
                 -
             {% else %}
                 {{user.bendFoward}}
-                <i class="fas fa-check-circle text-teal-400 ml-1"></i>
+                {% if user.bendFoward %}
+                    <i class="fas fa-check-circle text-teal-400 ml-1"></i>
+                {% endif %}
             {% endif %}
         </li>
         <li  class="text-center rounded-xl font-light text-lg py-2 mb-3 border border-gray-400">
@@ -70,7 +78,9 @@
                 -
             {% else %}
                 {{user.totalFlexibility}}
-                <i class="fas fa-check-circle text-teal-400 ml-1"></i>
+                {% if user.totalFlexibility %}
+                    <i class="fas fa-check-circle text-teal-400 ml-1"></i>
+                {% endif %}
             {% endif %}
         </li>
     </ul>
@@ -104,7 +114,9 @@
                 -
             {% else %}
                 {{user.sitUp}}
-                <i class="fas fa-check-circle text-teal-400 ml-1"></i>
+                {% if user.sitUp %}
+                    <i class="fas fa-check-circle text-teal-400 ml-1"></i>
+                {% endif %}
             {% endif %}
         </li>
         <li class="text-center rounded-xl font-light text-lg py-2 mb-3 border border-gray-400">
@@ -112,7 +124,9 @@
                 -
             {% else %}
                 {{user.grip}}
-                <i class="fas fa-check-circle text-teal-400 ml-1"></i>
+                {% if user.grip %}
+                    <i class="fas fa-check-circle text-teal-400 ml-1"></i>
+                {% endif %}
             {% endif %}
         </li>
     </ul>
@@ -134,7 +148,9 @@
                 -
             {% else %}
                 {{user.sprint}}
-                <i class="fas fa-check-circle text-teal-400 ml-1"></i>
+                {% if user.sprint %}
+                    <i class="fas fa-check-circle text-teal-400 ml-1"></i>
+                {% endif %}
             {% endif %}
         </li>
         <li class="text-center rounded-xl font-light text-sm py-2 mb-3 border border-gray-400">
@@ -142,7 +158,9 @@
                 -
             {% else %}
                 {{user.longJump}}
-                <i class="fas fa-check-circle text-teal-400 ml-1"></i>
+                {% if user.longJump %}
+                    <i class="fas fa-check-circle text-teal-400 ml-1"></i>
+                {% endif %}
             {% endif %}
         </li>
     </ul>
@@ -169,7 +187,9 @@
                 -
             {% else %}
                 {{user.height}}
-                <i class="fas fa-check-circle text-teal-400 ml-1"></i>
+                {% if user.height %}
+                    <i class="fas fa-check-circle text-teal-400 ml-1"></i>
+                {% endif %}
             {% endif %}
         </li>
         <li class="text-center rounded-xl font-light text-sm py-2 mb-3 border border-gray-400">
@@ -177,7 +197,9 @@
                 -
             {% else %}
                 {{user.weight}}
-                <i class="fas fa-check-circle text-teal-400 ml-1"></i>
+                {% if user.weight %}
+                    <i class="fas fa-check-circle text-teal-400 ml-1"></i>
+                {% endif %}
             {% endif %}
         </li>
         {% comment %} <li>

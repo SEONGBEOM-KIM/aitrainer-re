@@ -33,7 +33,7 @@ class CreateToDoView(user_mixins.LoggedInOnlyView, FormView):
         todo = form.save()
         todo.host = self.request.user
         todo.save()
-        messages.success(self.request, "To Do Created")
+        messages.success(self.request, "운동 목표가 저장되었습니다.")
         return redirect(reverse("todo:list"))
 
 
@@ -42,5 +42,5 @@ def delete_todo(request):
     request_id = request.GET.get("id")
     todo = models.ToDoList.objects.get(id=request_id)
     todo.delete()
-    messages.success(request, "To Do Deleted")
+    messages.success(request, "운동 목표가 삭제되었습니다.")
     return redirect(reverse("todo:list"))
