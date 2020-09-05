@@ -21,5 +21,16 @@ class CustomToDoListAdmin(admin.ModelAdmin):
     )
 
     list_display = (
+        "host",        
         "toDo",
+    )
+
+    list_filter = (
+        "host__school",
+        "host__gender",
+        "host__grade",
+    )
+
+    search_fields = (
+        "school",
     )
